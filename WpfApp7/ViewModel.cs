@@ -19,6 +19,10 @@ namespace WpfApp7
             if (UserName == "123" && PassWord == "456")
             {
                 MessageBox.Show("登录成功！");
+                var db = new DatabaseService();
+                db.SaveUser(UserName, PassWord);
+
+                MessageBox.Show("数据已存入数据库！");
             }
             else
             {
